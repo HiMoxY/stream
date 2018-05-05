@@ -1,0 +1,15 @@
+{
+  "name": "himoxybot",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "test": "_"
+  },
+  "author": "Me",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.3.2"
+  },
+  "devDependencies": {},
+  "description": ""
+}
