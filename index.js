@@ -19,19 +19,30 @@ client.on('message', msg => {
     msg.reply('pong');
   }
 });
-if (message.content.startsWith(prefix + "help")) {
-     let embed = new Discord.RichEmbed()
-.setThumbnail(message.author.avatarURL)
-.addField('     **bg invite** ' ,' **Add bot to server** ')
-.addField('     **_server**  ' ,' **information about The server** ')
-.addField('     **bg support** ' , '**Server support**') 
-.addField('     **_cats** ' , '**send pictures of cats**') 
-.addField('     **bg avatar** ' ,' ** free access to personnel account picture**')
-.addField('     **bg id** ' , '**your profile id**')
-.setColor('#7d2dbe')
-.setFooter("Breakfast Gaming™")
-.setTimestamp() 
-  message.channel.sendEmbed(embed);
+if (message.content === '.help') {
+              var embed  = new Discord.RichEmbed()
+                .addField("**LINKS**" ,":no_entry_sign: Added blocking links :no_entry_sign: ")
+                .addField("broadcast (bc)" ,"**user:** ``.broadcast <message> , $bc <message>``")
+                .addField("**BAN**" ,"**user:** ``.ban <user>``")
+                .addField("**KICK**" ,"**user:** ``.kick <user> ``")
+                .addField("**ِAVATAR**" ,"**user:** ``.avatar``")
+                .addField("**INFO**", "**user :** ``.info``")
+                .addField("**SAY**" ,"**user:** ``.say <message>``")
+                .addField("**ID**" ,"**ال��ستخدام:** ``.id``")
+                .addField("**SERVER**" ,"**user:** ``.server``")
+                .addField("**INVITE**" ,"**user:** ``.invite <invite bots>``")
+                .addField("**SUPPORT**" ,"**user:** ``.suppport <server support>``")
+                .addField("**QA**" ,"**user:** ``.qa <السؤال>``  ")
+                .addField("**CLEAR**" ,"**user:** ``.clear <العدد>``")
+                .addField("**PING**", "**user:** ``.ping``")
+                .addField("**SERVERNAME**", "**user:** ``.servername``")
+                .addField("**CUT_TWEET**", "**user** ``.ct``")
+                .addField("**TWEET**", "**user** ``.tweet <message>``")
+                .addField("**NO INVITE LINKE**","Added the block blocking feature")
+                .addField("**LOGIN**" , " HiMoxY™🔊 ")
+                .setColor('RANDOM')
+.setColor('RANDOM')
+  message.author.sendEmbed(embed);
     }
 });
 client.on('message', message => {
@@ -90,7 +101,7 @@ client.on("message", message => {
         color: 0x06DF00,
         description: "Messages successfully cleared",
         footer: {
-          text: "Breakfast Gaming."
+          text: "Breakfast Gaming TM."
         }
       }}).then(msg => {msg.delete(3000)});
                           }
@@ -122,7 +133,7 @@ client.on("message", message => {
   .setThumbnail(message.author.avatarURL)  
   .setAuthor(message.author.username)
 .setDescription("Account information")
-               .setFooter(`HiMoxY™🔊.`, '')
+               .setFooter(`Breakfast Gaming TM.`, '')
   .setColor("#9B59B6")
   .addField("account name", `${message.author.username}`)
   .addField('account code', message.author.discriminator)
@@ -134,7 +145,7 @@ client.on("message", message => {
   message.channel.sendEmbed(embed);
     }
 });
-var prefix = ".";
+var prefix = "bg";
 client.on('message', message => {
   if (message.author.bot) return;
   if (!message.content.startsWith(prefix)) return;
@@ -162,8 +173,8 @@ client.on("guildMemberRemove", member => {
   }
 );
 client.on("message", (message) => {
-    if (message.content.startsWith("bg ban ")) {
-      if(!message.member.hasPermission('BAN_MEMBERS')) return message.reply(' you dont have permission');
+    if (message.content.startsWith(".ban ")) {
+      if(!message.member.hasPermission('BAN_MEMBERS')) return message.reply('⚠ you dont have permission');
         var member= message.mentions.members.first();
         member.ban().then((member) => {
             message.channel.send(member.displayName + " He was successfully expelled :wave: ");
